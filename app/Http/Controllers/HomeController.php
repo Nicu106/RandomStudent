@@ -7,15 +7,22 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
 
-//     public $inputValue = $_GET['randomNumber'];
     public function getInputNumber(Request $request){
 
         $inputValue = $request->input('randomNumber');
-        return view('shakeNumbers', ['inputValue' => $inputValue] );
+
+        return $inputValue;
     }
 
-    public function redirect(){
-        return view('shakeNumbers');
-    }
+    //with this funtion we are going to pick a student
+    public function randomNumber(){
+        return rand(0, $this->getInputNumber());
+     }
+
+     public function generateHtmlCircles(){
+        for($i=0;$i <=$this->getInputNumber();$i++){
+           return $i;
+        }
+     }
 
 }

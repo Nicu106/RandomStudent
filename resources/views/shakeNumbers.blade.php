@@ -66,7 +66,7 @@
 <body>
 <a href="{{Route('index')}}" class="back-button">Back</a>
 <div class="content">
-    <h2>Here is the page where you are going to pick student</h2>
+    <h2>Here is the page where you are going to pick student {{$html}}</h2>
 </div>
 
 <script>
