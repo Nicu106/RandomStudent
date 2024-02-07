@@ -111,6 +111,7 @@
     <p>Welcome to our Random Student Chooser App! This handy tool helps you randomly select a student to perform a task or answer a question.</p>
     <p>Simply enter the number of students, click the button, and let the app make the decision for you. It's a fun and fair way to engage your students!</p>
     <p>Ready to add some excitement to your classroom? Give it a try!</p>
+    <center><button class="button" href="{{Route('test')}}">Dowland file</button></center>
 </div>
 </div>
 </body>
