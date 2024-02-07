@@ -6,7 +6,7 @@ services:
       labels:
           caddy.email: randomStudent@mailinator.com
       ports:
-          - 80:80
+          - 80:8080
           - 443:443
       volumes:
           - /var/run/docker.sock:/var/run/docker.sock
@@ -54,34 +54,6 @@ services:
     environment:
       APP_ENV: local
       CONTAINER_ROLE: fpm
-
-  #    scheduler-laravel:
-  #        build:
-  #            context: .
-  #            dockerfile: docker/build/php8.2/Dockerfile
-  #        restart: unless-stopped
-  #        volumes:
-  #            - ./:/var/www/laravel/
-  #        #          - ./.env.docker:/var/www/laravel/.env
-  #        networks:
-  #            - docker_intern
-  #        environment:
-  #            APP_ENV: local
-  #            CONTAINER_ROLE: scheduler
-
-  #    queue-laravel:
-  #        build:
-  #            context: .
-  #            dockerfile: docker/build/php8.2/Dockerfile
-  #        restart: unless-stopped
-  #        volumes:
-  #            - ./:/var/www/laravel/
-  #        #          - ./.env.docker:/var/www/laravel/.env
-  #        networks:
-  #            - docker_intern
-  #        environment:
-  #            APP_ENV: local
-  #            CONTAINER_ROLE: queue
 
   db:
     image: mariadb

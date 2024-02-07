@@ -11,7 +11,7 @@ class HomeController extends Controller
 
         $inputValue = $request->input('randomNumber');
 
-        return $inputValue;
+        return view('shakeNumbers', ['inputValue'=>$inputValue]);
     }
 
     //with this funtion we are going to pick a student
